@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Aluno</title>
+</head>
+<body>
+    <h1>Adicionar Novo Aluno</h1>
+    <form action="" method="post">
+        <label for="nome_completo">Nome Completo:</label>
+        <input type="text" id="nome_completo" name="nome_completo"><br><br>
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
+
+        <label for="codigo_censo">Escola:</label>
+        <select name="codigo_censo" id="data_nascimento">
+            {% for escola in escolas %}
+                <option value="{{ escola[0] }}">{{ escola[1] }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="etapa">Etapa:</label>
+        <input type="text" name="etapa" id="etapa"><br><br>
+
+        <label for="id_familia">Família:</label>
+        <select name="id_familia" id="id_familia">
+            {% for familia in familias %}
+                <option value="{{ familia[0] }}">{{ familia[1]}}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Adicionar Aluno</button>
+    </form>
+    <a href="{{ url_for('listar_escolas') }}"></a>
+</body>
+</html>
