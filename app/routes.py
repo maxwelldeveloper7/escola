@@ -2,6 +2,10 @@ from flask import render_template, redirect
 from app import app, conectar_db
 from flask import request
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/escolas')
 def listar_escolas():
     with conectar_db() as conn:
@@ -29,7 +33,7 @@ def adicionar_aluno():
                             data_nascimento,
                             id_familia
                         )
-                        VALUES (?, ?, ?, ?, ?)
+                        VALUES (%s, %s, %s, %s, %s)
                         ''', (
                             codigo_censo,
                             etapa,
