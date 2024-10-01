@@ -8,22 +8,25 @@
     <title>Lista de Escolas</title>
 </head>
 <body>
-    <h1>Lista de Escolas</h1>
-    <table>
-        <thead>
-            <th>Código Censo</th>
-            <th>Nome da Escola</th>
-            <th>Município</th>
-        </thead>
-        <tbody>
-            {% for escola in escolas %}
-            <tr>
-                <td>{{ escola[0] }}</td>
-                <td>{{ escola[1] }}</td>
-                <td>{{ escola[2] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</body>
+    <main>
+
+        <h1>Lista de Escolas</h1>
+        <table>
+            <thead>
+                <th>Código Censo</th>
+                <th>Nome da Escola</th>
+                <th>Município</th>
+            </thead>
+            <tbody>
+                {% for escola in escolas %}
+                <tr>
+                    <td>{{ escola[0] }}</td>
+                    <td>{{ escola[1] }}</td>
+                    <td>{{ escola[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    </body>
 </html>

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkgray;
+
+}
+
+main {
+    width: 75vw;
+    height: 100%;
+    background-color: #fff;
+}
+
+header {
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 10px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: solid 1px;
+}
+
+table thead tr th, td {
+    padding: 5px;
+}
