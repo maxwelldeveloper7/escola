@@ -9,34 +9,40 @@
 </head>
 <body>
     <main>
-        <h1>Adicionar Novo Aluno</h1>
+        <header>
+            <h1>Adicionar Novo Aluno</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('listar_escolas') }}">Escolas</a></li>
+                    <li><a href="{{ url_for('adicionar_aluno')}}">Adicionar Aluno</a></li>
+                </ul>
+            </nav>
+        </header>
         <form action="" method="post">
             <label for="nome_completo">Nome Completo:</label>
-            <input type="text" id="nome_completo" name="nome_completo"><br><br>
+            <input type="text" id="nome_completo" name="nome_completo">
             
             <label for="data_nascimento">Data de Nascimento:</label>
-            <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
+            <input type="date" id="data_nascimento" name="data_nascimento">
             
             <label for="codigo_censo">Escola:</label>
             <select name="codigo_censo" id="data_nascimento">
                 {% for escola in escolas %}
                 <option value="{{ escola[0] }}">{{ escola[1] }}</option>
                 {% endfor %}
-            </select><br><br>
+            </select>
             
             <label for="etapa">Etapa:</label>
-            <input type="text" name="etapa" id="etapa"><br><br>
+            <input type="text" name="etapa" id="etapa">
             
             <label for="id_familia">Família:</label>
             <select name="id_familia" id="id_familia">
                 {% for familia in familias %}
                 <option value="{{ familia[0] }}">{{ familia[1]}}</option>
                 {% endfor %}
-            </select>
-            <br><br>
+            </select>            
             <button type="submit">Adicionar Aluno</button>
-        </form>
-        <a href="{{ url_for('listar_escolas') }}">Escolas</a>
+        </form>        
     </main>
 </body>
 </html>

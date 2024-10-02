@@ -22,7 +22,10 @@ header {
 
 header h1 {
     font-size: 1.5rem;
-    margin: 10px 0;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 header nav ul{
@@ -38,11 +41,30 @@ header nav ul li a{
 }
 
 table {
-    width: 80%;
+    width: 90%;
     margin: auto;
-    border: solid 1px;
 }
 
 table thead tr th, td {
     padding: 5px;
+    border: 1px solid;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: lightgray;
+    margin: 0 20px 20px;
+    border-radius: 10px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, select, button{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
 }
